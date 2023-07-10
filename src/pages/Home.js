@@ -1,10 +1,16 @@
 import React from "react";
-import Header from "../components/navbar/home/Header";
+import Header from "../components/home/Header/Header";
+import AboutMe from "../components/home/About me/AboutMe";
+import WhatDoing from "../components/home/WhatDoing/WhatDoing";
 
-const Home = () => {
-  return <div className="home-page">
-    <Header />
-  </div>;
+const Home = ({ characterAnim }) => {
+  return (
+    <div className="home-page">
+      <Header />
+      <AboutMe characterAnim={characterAnim} />
+      <WhatDoing characterAnim={characterAnim} parentWidth={1} />
+    </div>
+  );
 };
 
 export default Home;

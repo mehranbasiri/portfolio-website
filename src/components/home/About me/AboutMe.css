@@ -1,0 +1,116 @@
+.aboutMe-container {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+  /* animation: AboutMe 2s ease; */
+  overflow: hidden;
+
+  /* animation-iteration-count: calc(1, 0, 0, 5); */
+}
+/* @keyframes AboutMe {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+    overflow: hidden;
+    animation-delay: 0.5s;
+  }
+  50% {
+    transform: translateY(25%);
+    opacity: 0;
+    animation-delay: 0.5s;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+    overflow: hidden;
+  }
+} */
+
+.aboutMe-container p {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 700px;
+  padding-right: 2rem;
+  font-family: sans-serif;
+  font-size: 42px;
+  text-align: left;
+  font-weight: 500;
+  overflow-y: hidden;
+}
+.profile-section {
+  padding-left: 3rem;
+  padding-top: 2rem;
+}
+.profile-section h5 {
+  font-size: 30px;
+  font-family: var(--font-family);
+  letter-spacing: 2px;
+  color: gray;
+  font-weight: 100;
+}
+.image-box {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(249, 92, 31);
+  border-radius: 50%;
+  margin-left: 2rem;
+  margin-top: 4rem;
+}
+
+.image-box img {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  bottom: 3.2rem;
+  left: 1rem;
+  border-radius: 0px 0px 200px 80px;
+}
+
+@media screen and (max-width: 1200px) {
+  .aboutMe-container {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutMe-container p {
+    width: 70%;
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .image-box {
+    width: 500px;
+    height: 500px;
+  }
+  .image-box img {
+    width: 650px;
+    height: 650px;
+    position: relative;
+    left: 3.5rem;
+    bottom: 9.5rem;
+    border-radius: 0px 0px 600px 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .image-box {
+    width: 300px;
+    height: 300px;
+  }
+  .image-box img {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    left: 3.5rem;
+    bottom: 3rem;
+    border-radius: 0px 0px 600px 190px;
+  }
+  .aboutMe-container p {
+    width: 70%;
+    font-size: 25px;
+  }
+}

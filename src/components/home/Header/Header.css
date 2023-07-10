@@ -11,8 +11,21 @@
   width: 50rem;
   justify-content: center;
   margin: auto;
+  animation: info 1s;
 }
-
+@keyframes info {
+  0% {
+    transform: translateY(30%);
+    opacity: 1;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0%);
+    /* opacity: 0.5; */
+  }
+}
 .info h1 {
   font-size: 92px;
   font-family: var(--font-family);
