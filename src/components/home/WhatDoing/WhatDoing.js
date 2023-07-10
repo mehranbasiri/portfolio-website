@@ -9,8 +9,7 @@ import { useAnimation, motion, useMotionValue } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { transform } from "lodash";
-import { Translate } from "@mui/icons-material";
+
 
 const Img = () => {
   return <img src={whatdoing} alt="" />;
@@ -66,6 +65,7 @@ const WhatDoing = ({ characterAnim, parentWidth }) => {
   const ctrls = useAnimation();
   const { ref, inView } = useInView({
     threshold: 0.5,
+    rootMargin: "200px",
     triggerOnce: true,
   });
   console.log(ref);
