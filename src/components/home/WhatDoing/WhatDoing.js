@@ -10,7 +10,6 @@ import { useInView } from "react-intersection-observer";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
-
 const Img = () => {
   return <img src={whatdoing} alt="" />;
 };
@@ -106,8 +105,18 @@ const WhatDoing = ({ characterAnim, parentWidth }) => {
     }, 4000);
     return () => clearTimeout(timerRef.current);
   }, [goToNext]);
-
-  
+  // const [indexSlider, setIndexSlider] = useState(0);
+  // console.log("currentSlide" + currentSlide);
+  // let SliderStyle = "nextSlide";
+  // if (currentSlide === indexSlider) {
+  //   SliderStyle = "activeSlide";
+  // }
+  // if (
+  //   currentSlide === indexSlider - 1 ||
+  //   (indexSlider === 0 && currentSlide === slides.length - 1)
+  // ) {
+  //   SliderStyle = "lastSlide";
+  // }
   return (
     <div className="whatDoing-container">
       <h5>WHAT I'M DOING</h5>
@@ -153,35 +162,37 @@ const WhatDoing = ({ characterAnim, parentWidth }) => {
         </div>
 
         <div className="slider-container">
-          
-            <span className="sliderNumber">
-              {slides[currentSlide].slideNumber}
-            </span>
-            <img src={slides[currentSlide].url} />
-            <div className="project">
-              <h3>PROJECT</h3>
+         
+            
+              <span className="sliderNumber">
+                {slides[currentSlide].slideNumber}
+              </span>
+              <img src={slides[currentSlide].url} />
+              <div className="project">
+                <h3>PROJECT</h3>
 
-              <p>{slides[currentSlide].project}</p>
-            </div>
-            <div className="type">
-              <h3>TYPE</h3>
-              <p>{slides[currentSlide].type}</p>
-            </div>
-          </div>
-          <div className="dotsSlides">
-            {slides.map((slide, slideIndex) => (
-              <div
-                className={`${dot ? "dotsStyle active" : "dotsStyle"}`}
-                key={slideIndex}
-                onClick={() => goToSlide(slideIndex)}
-              >
-                .
+                <p>{slides[currentSlide].project}</p>
               </div>
-            ))}
+              <div className="type">
+                <h3>TYPE</h3>
+                <p>{slides[currentSlide].type}</p>
+             
           </div>
         </div>
+
+        <div className="dotsSlides">
+          {slides.map((slide, slideIndex) => (
+            <div
+              className={`${dot ? "dotsStyle active" : "dotsStyle"}`}
+              key={slideIndex}
+              onClick={() => goToSlide(slideIndex)}
+            >
+              .
+            </div>
+          ))}
+        </div>
       </div>
-    
+    </div>
   );
 };
 

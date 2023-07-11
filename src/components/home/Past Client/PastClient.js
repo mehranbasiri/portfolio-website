@@ -83,6 +83,7 @@ const PastClient = ({ characterAnim }) => {
         </div>
         <div className="past-slide-item">
           {people.map((item, indexPeople) => {
+            console.log("indexpeople" + indexPeople);
             const { id, title, content } = item;
             let position = "nextSlide";
             if (indexPeople === index) {
@@ -101,6 +102,7 @@ const PastClient = ({ characterAnim }) => {
               </article>
             );
           })}
+          {}
         </div>
       </div>
     </div>

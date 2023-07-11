@@ -11,10 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.line {
+  width: 80%;
+  height: 1px;
+  background-color: rgb(190, 188, 188);
+  margin: auto;
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,700;1,600&display=swap");
 
-
-:root{
-  --font-family: "Noto","Sans";
+:root {
+  --font-family: "Noto", "Sans";
 }

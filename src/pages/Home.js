@@ -3,6 +3,7 @@ import Header from "../components/home/Header/Header";
 import AboutMe from "../components/home/About me/AboutMe";
 import WhatDoing from "../components/home/WhatDoing/WhatDoing";
 import PastClient from "../components/home/Past Client/PastClient";
+import Footer from "../components/Footer/Footer";
 
 const Home = ({ characterAnim }) => {
   return (
@@ -11,6 +12,7 @@ const Home = ({ characterAnim }) => {
       <AboutMe characterAnim={characterAnim} />
       <WhatDoing characterAnim={characterAnim} />
       <PastClient characterAnim={characterAnim} />
+      <Footer />
     </div>
   );
 };
